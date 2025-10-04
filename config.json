@@ -1,0 +1,38 @@
+{
+    "file_paths": {
+        "pos_dir": "pos",
+        "neg_dir": "neg",
+        "saved_model_path": "models/sentiment_classifier.joblib"
+    },
+    "model_settings": {
+        "classifier": "logistic_regression",
+        "use_bert_embeddings": true,
+        "k_folds": 5
+    },
+    "hyperparameters": {
+        "naive_bayes": {},
+        "logistic_regression": {
+            "C": 1.0,
+            "solver": "liblinear"
+        },
+        "svm": {
+            "C": 1.0,
+            "kernel": "linear"
+        },
+        "xgboost": {
+            "n_estimators": 100,
+            "max_depth": 3,
+            "learning_rate": 0.1
+        }
+    },
+    "feature_extraction": {
+        "min_freq": 2,
+        "max_freq": 10000,
+        "ngram_range": [
+            1,
+            2
+        ],
+        "use_ngrams": true,
+        "use_noun_phrases": false
+    }
+}
